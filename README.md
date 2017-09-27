@@ -39,6 +39,29 @@ Part 1:
 16) run go benchmark (./sim-profile -iclass benchmarks/go.alpha 50 9 2stone9.in >OUT )
 17) explore other commands (replace -iclass with other options in help message) 
     For example: run (./sim-profile -all benchmarks/cc1.alpha -O 1stmt.i)
+
+Part 2:
+
+18) Open terminal in simplesim-3.0
+19) run (make clean)
+20) run (make config-pisa)
+21) run (make)
+21) run (./sim-profile -iclass BenchMarks_Little/cc1.ss -O 1smt.i)
+23) run (./sim-profile -iclass BenchMarks_Little/anagram.ss words <BenchMarks_Little/anagram.in> OUT)
+25) run (./sim-profile -iclass BenchMarks_Little/compress95.ss <BenchMarks_Little/compress95.in> OUT)
+27) run (./sim-profile -iclass BenchMarks_Little/go.ss 50 9 2stone9.in > OUT)
+28) explore other commands
+29) run following command will execute the compress95 benchmark and print the output to compress95.out and log the execution trace to compress95.trace in the Results folder
+    (./sim-outorder BenchMarks_Little/Programs/compress95.ss < BenchMarks_Little/Input/compress95.in  2> BenchMarks_Little/Results/compress95.trace > BenchMarks_Little/Results/compress95.out)
+30) The below command will execute the go benchmark and print the output to go.out and log the execution trace to go.trace in the Results folder
+    ./sim-outorder BenchMarks_Little/Programs/go.ss 50 9 BenchMarks_Little/Input/2stone9.in  2> BenchMarks_Little/Results/go.trace > BenchMarks_Little/Results/go.out
+31) Before executing the anagram program place the words file from the Input folder in the simplesim-3.0 directory. The below command will execute the anagram benchmark and print the output to anagram.out and log the execution trace to anagram.trace in the Results folder
+    ./sim-outorder BenchMarks_Little/Programs/anagram.ss words < BenchMarks_Little/Input/anagram.in  2> BenchMarks_Little/Results/anagram.trace > BenchMarks_Little/Results/anagram.out
+32) The below command will execute the cc1 benchmark and print the output to 1stmt.s in the Programs folder and log the execution trace to cc1.trace in the Results folder
+    ./sim-outorder BenchMarks_Little/Programs/cc1.ss -O BenchMarks_Little/Input/1stmt.i 2> BenchMarks_Little/Results/cc1.trace
+33) Before executing the perl program place the perl-tests.pl file from the Input folder in the simplesim-3.0 directory. The below command will execute the perl benchmark and print the output to perl.out and log the execution trace to perl.trace in the Results folder
+    ./sim-outorder BenchMarks_Little/Programs/perl.ss < perl-tests.pl 2> BenchMarks_Little/Results/perl.trace > BenchMarks_Little/Results/perl.out
+34) check your result in Result folder
     
     
 
