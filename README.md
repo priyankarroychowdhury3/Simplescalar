@@ -30,13 +30,13 @@ Part 1:
 7) run (make config-alpha)
 8) run (make)
 9) run (./sim-profile -h) to print help message. 
-10) run cc1 benchmark (./sim-profile -iclass benchmarks/cc1.alpha -O 1stmt.i ) 
+10) run cc1 benchmark (./sim-profile -iclass Benchmarks/cc1.alpha -O 1stmt.i ) 
 11) read the output
-12) run anagram benchmark (./sim-profile -iclass benchmarks/anagram.alpha words <benchmarks/anagram.in> OUT)
+12) run anagram benchmark (./sim-profile -iclass Benchmarks/anagram.alpha words <benchmarks/anagram.in> OUT)
 13) check your result
-14) run compress95 benchmark (./sim-profile -iclass benchmarks/compress95.alpha <benchmarks/compress95.in > OUT)
+14) run compress95 benchmark (./sim-profile -iclass Benchmarks/compress95.alpha <benchmarks/compress95.in > OUT)
 15) check your result
-16) run go benchmark (./sim-profile -iclass benchmarks/go.alpha 50 9 2stone9.in >OUT )
+16) run go benchmark (./sim-profile -iclass Benchmarks/go.alpha 50 9 2stone9.in >OUT )
 17) explore other commands (replace -iclass with other options in help message) 
     For example: run (./sim-profile -all benchmarks/cc1.alpha -O 1stmt.i)
 
